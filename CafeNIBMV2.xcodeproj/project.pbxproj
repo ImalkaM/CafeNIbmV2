@@ -13,9 +13,17 @@
 		AFA05DAB2618A08C009EC984 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA05DA92618A08C009EC984 /* Main.storyboard */; };
 		AFA05DAD2618A08E009EC984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA05DAC2618A08E009EC984 /* Assets.xcassets */; };
 		AFA05DB02618A08E009EC984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA05DAE2618A08E009EC984 /* LaunchScreen.storyboard */; };
+		AFA05DBE2618AD99009EC984 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DBD2618AD99009EC984 /* RegisterViewController.swift */; };
+		AFA05DC12618B622009EC984 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DC02618B622009EC984 /* LoginViewController.swift */; };
+		AFA05DC42618B630009EC984 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DC32618B630009EC984 /* HomeViewController.swift */; };
+		AFA05DC72618B682009EC984 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DC62618B682009EC984 /* Constants.swift */; };
+		AFA05DCA2618BB11009EC984 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFA05DC92618BB11009EC984 /* GoogleService-Info.plist */; };
+		FAEE5F6E6A75380593E279B6 /* Pods_CafeNIBMV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A76BA084E1F22C26BC623EC /* Pods_CafeNIBMV2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A76BA084E1F22C26BC623EC /* Pods_CafeNIBMV2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeNIBMV2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8069CA927F7B9F800F9D8CF4 /* Pods-CafeNIBMV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNIBMV2.release.xcconfig"; path = "Target Support Files/Pods-CafeNIBMV2/Pods-CafeNIBMV2.release.xcconfig"; sourceTree = "<group>"; };
 		AFA05DA02618A08C009EC984 /* CafeNIBMV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeNIBMV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA05DA32618A08C009EC984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA05DA52618A08C009EC984 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,12 @@
 		AFA05DAC2618A08E009EC984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFA05DAF2618A08E009EC984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFA05DB12618A08E009EC984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA05DBD2618AD99009EC984 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AFA05DC02618B622009EC984 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AFA05DC32618B630009EC984 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AFA05DC62618B682009EC984 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AFA05DC92618BB11009EC984 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F86A9B1C17341BCBF0565837 /* Pods-CafeNIBMV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNIBMV2.debug.xcconfig"; path = "Target Support Files/Pods-CafeNIBMV2/Pods-CafeNIBMV2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEE5F6E6A75380593E279B6 /* Pods_CafeNIBMV2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84A6728B9CAA4D4FDBCC0A81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F86A9B1C17341BCBF0565837 /* Pods-CafeNIBMV2.debug.xcconfig */,
+				8069CA927F7B9F800F9D8CF4 /* Pods-CafeNIBMV2.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A2B71ACBD72AF5EA3F12A9F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A76BA084E1F22C26BC623EC /* Pods_CafeNIBMV2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFA05D972618A08C009EC984 = {
 			isa = PBXGroup;
 			children = (
 				AFA05DA22618A08C009EC984 /* CafeNIBMV2 */,
 				AFA05DA12618A08C009EC984 /* Products */,
+				84A6728B9CAA4D4FDBCC0A81 /* Pods */,
+				A2B71ACBD72AF5EA3F12A9F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +91,44 @@
 		AFA05DA22618A08C009EC984 /* CafeNIBMV2 */ = {
 			isa = PBXGroup;
 			children = (
+				AFA05DBB2618A99D009EC984 /* Models */,
+				AFA05DBA2618A990009EC984 /* Controllers */,
+				AFA05DB82618A982009EC984 /* Views */,
 				AFA05DA32618A08C009EC984 /* AppDelegate.swift */,
 				AFA05DA52618A08C009EC984 /* SceneDelegate.swift */,
 				AFA05DA72618A08C009EC984 /* ViewController.swift */,
-				AFA05DA92618A08C009EC984 /* Main.storyboard */,
 				AFA05DAC2618A08E009EC984 /* Assets.xcassets */,
 				AFA05DAE2618A08E009EC984 /* LaunchScreen.storyboard */,
 				AFA05DB12618A08E009EC984 /* Info.plist */,
+				AFA05DC92618BB11009EC984 /* GoogleService-Info.plist */,
+				AFA05DC62618B682009EC984 /* Constants.swift */,
 			);
 			path = CafeNIBMV2;
+			sourceTree = "<group>";
+		};
+		AFA05DB82618A982009EC984 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFA05DA92618A08C009EC984 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFA05DBA2618A990009EC984 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFA05DBD2618AD99009EC984 /* RegisterViewController.swift */,
+				AFA05DC02618B622009EC984 /* LoginViewController.swift */,
+				AFA05DC32618B630009EC984 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AFA05DBB2618A99D009EC984 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFA05DB42618A08E009EC984 /* Build configuration list for PBXNativeTarget "CafeNIBMV2" */;
 			buildPhases = (
+				EB2D85D9294AA2100862BFA3 /* [CP] Check Pods Manifest.lock */,
 				AFA05D9C2618A08C009EC984 /* Sources */,
 				AFA05D9D2618A08C009EC984 /* Frameworks */,
 				AFA05D9E2618A08C009EC984 /* Resources */,
+				DB1BAD504F9970E1E30CDCA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,12 +191,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA05DB02618A08E009EC984 /* LaunchScreen.storyboard in Resources */,
+				AFA05DCA2618BB11009EC984 /* GoogleService-Info.plist in Resources */,
 				AFA05DAD2618A08E009EC984 /* Assets.xcassets in Resources */,
 				AFA05DAB2618A08C009EC984 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB1BAD504F9970E1E30CDCA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CafeNIBMV2/Pods-CafeNIBMV2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CafeNIBMV2/Pods-CafeNIBMV2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CafeNIBMV2/Pods-CafeNIBMV2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB2D85D9294AA2100862BFA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafeNIBMV2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFA05D9C2618A08C009EC984 /* Sources */ = {
@@ -140,6 +249,10 @@
 				AFA05DA82618A08C009EC984 /* ViewController.swift in Sources */,
 				AFA05DA42618A08C009EC984 /* AppDelegate.swift in Sources */,
 				AFA05DA62618A08C009EC984 /* SceneDelegate.swift in Sources */,
+				AFA05DC12618B622009EC984 /* LoginViewController.swift in Sources */,
+				AFA05DC72618B682009EC984 /* Constants.swift in Sources */,
+				AFA05DBE2618AD99009EC984 /* RegisterViewController.swift in Sources */,
+				AFA05DC42618B630009EC984 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +396,7 @@
 		};
 		AFA05DB52618A08E009EC984 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F86A9B1C17341BCBF0565837 /* Pods-CafeNIBMV2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +415,7 @@
 		};
 		AFA05DB62618A08E009EC984 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8069CA927F7B9F800F9D8CF4 /* Pods-CafeNIBMV2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
