@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -19,8 +20,21 @@ class LoginViewController: UIViewController {
         registerTextFieldSizeSetup()
         // Do any additional setup after loading the view.
     }
-    
-
+   
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text{
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+              
+                if let err = error{
+                    print(err)
+                }else{
+                    self.performSegue(withIdentifier: K.loginToHomeSeauge, sender: self)
+                }
+              // ...
+            }
+        }
+    }
     
     func registerTextFieldSizeSetup(){
         emailTextField.addConstraint(emailTextField.heightAnchor.constraint(equalToConstant: 50))
