@@ -8,15 +8,26 @@
 import UIKit
 
 class FoodDetailsViewController: UIViewController {
-
+    
+    
+    var price:Float = 0.0
+    var image:String = ""
+    var name:String = ""
+    var foodDescription:String = ""
+    
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var foodNamelabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        priceLabel.text = String(price)
+        foodImage.image = UIImage(named: "\(image)")
+        descriptionLabel.text = foodDescription
+        foodNamelabel.text = name
         // Do any additional setup after loading the view.
     }
     

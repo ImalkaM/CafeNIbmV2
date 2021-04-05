@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
 
 extension HomeViewController: UITableViewDataSource{
@@ -69,14 +69,20 @@ extension HomeViewController: UITableViewDataSource{
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
-            self.performSegue(withIdentifier: K.FoodTableToFoodDetailsSeauge, sender: self)
+        
+        self.performSegue(withIdentifier: K.FoodTableToFoodDetailsSeauge, sender: self)
         
     }
-     func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if (segue.identifier == K.FoodTableToFoodDetailsSeauge) {
-            let controller = (segue.destination as! UINavigationController).topViewController as! FoodDetailsViewController
-            let row = (sender as! NSIndexPath).row; //we know that sender is an NSIndexPath
-        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let secondViewController = segue.destination as! FoodDetailsViewController
+        
+        if let indexPath = mainTableView.indexPathForSelectedRow {
+            
+            secondViewController.price = Float(foodDetails[indexPath.row].price)
+            secondViewController.foodDescription = foodDetails[indexPath.row].description
+            secondViewController.name = foodDetails[indexPath.row].name
+            secondViewController.image = foodDetails[indexPath.row].image
+        } 
     }
 }
