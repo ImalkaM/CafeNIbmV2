@@ -11,4 +11,11 @@ import Foundation
 struct K {
     static let registerToHomeSeauge = "RegisterToHome"
     static let loginToHomeSeauge = "LoginToHome"
+    static let mainTableCell = "MainFoodCell"
+    static let nibName = "FoodSelectCell"
+    static let FoodTableToFoodDetailsSeauge = "FoodTableToFoodDetails"
+   
+    
 }
+
+

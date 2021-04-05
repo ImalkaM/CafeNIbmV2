@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,10 @@
 		AFA05DC42618B630009EC984 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DC32618B630009EC984 /* HomeViewController.swift */; };
 		AFA05DC72618B682009EC984 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DC62618B682009EC984 /* Constants.swift */; };
 		AFA05DCA2618BB11009EC984 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFA05DC92618BB11009EC984 /* GoogleService-Info.plist */; };
+		AFA05DDF26197E63009EC984 /* FoodDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DDE26197E63009EC984 /* FoodDetails.swift */; };
+		AFA05DE82619A364009EC984 /* FoodSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DE62619A364009EC984 /* FoodSelectCell.swift */; };
+		AFA05DE92619A364009EC984 /* FoodSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA05DE72619A364009EC984 /* FoodSelectCell.xib */; };
+		AFA05DEC261A19F8009EC984 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DEB261A19F8009EC984 /* FoodDetailsViewController.swift */; };
 		FAEE5F6E6A75380593E279B6 /* Pods_CafeNIBMV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A76BA084E1F22C26BC623EC /* Pods_CafeNIBMV2.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,10 @@
 		AFA05DC32618B630009EC984 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AFA05DC62618B682009EC984 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AFA05DC92618BB11009EC984 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFA05DDE26197E63009EC984 /* FoodDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetails.swift; sourceTree = "<group>"; };
+		AFA05DE62619A364009EC984 /* FoodSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelectCell.swift; sourceTree = "<group>"; };
+		AFA05DE72619A364009EC984 /* FoodSelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSelectCell.xib; sourceTree = "<group>"; };
+		AFA05DEB261A19F8009EC984 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
 		F86A9B1C17341BCBF0565837 /* Pods-CafeNIBMV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNIBMV2.debug.xcconfig"; path = "Target Support Files/Pods-CafeNIBMV2/Pods-CafeNIBMV2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +66,6 @@
 				F86A9B1C17341BCBF0565837 /* Pods-CafeNIBMV2.debug.xcconfig */,
 				8069CA927F7B9F800F9D8CF4 /* Pods-CafeNIBMV2.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -110,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				AFA05DA92618A08C009EC984 /* Main.storyboard */,
+				AFA05DE62619A364009EC984 /* FoodSelectCell.swift */,
+				AFA05DE72619A364009EC984 /* FoodSelectCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 				AFA05DBD2618AD99009EC984 /* RegisterViewController.swift */,
 				AFA05DC02618B622009EC984 /* LoginViewController.swift */,
 				AFA05DC32618B630009EC984 /* HomeViewController.swift */,
+				AFA05DEB261A19F8009EC984 /* FoodDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -127,6 +137,7 @@
 		AFA05DBB2618A99D009EC984 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AFA05DDE26197E63009EC984 /* FoodDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA05DB02618A08E009EC984 /* LaunchScreen.storyboard in Resources */,
+				AFA05DE92619A364009EC984 /* FoodSelectCell.xib in Resources */,
 				AFA05DCA2618BB11009EC984 /* GoogleService-Info.plist in Resources */,
 				AFA05DAD2618A08E009EC984 /* Assets.xcassets in Resources */,
 				AFA05DAB2618A08C009EC984 /* Main.storyboard in Resources */,
@@ -248,9 +260,12 @@
 			files = (
 				AFA05DA82618A08C009EC984 /* ViewController.swift in Sources */,
 				AFA05DA42618A08C009EC984 /* AppDelegate.swift in Sources */,
+				AFA05DE82619A364009EC984 /* FoodSelectCell.swift in Sources */,
+				AFA05DDF26197E63009EC984 /* FoodDetails.swift in Sources */,
 				AFA05DA62618A08C009EC984 /* SceneDelegate.swift in Sources */,
 				AFA05DC12618B622009EC984 /* LoginViewController.swift in Sources */,
 				AFA05DC72618B682009EC984 /* Constants.swift in Sources */,
+				AFA05DEC261A19F8009EC984 /* FoodDetailsViewController.swift in Sources */,
 				AFA05DBE2618AD99009EC984 /* RegisterViewController.swift in Sources */,
 				AFA05DC42618B630009EC984 /* HomeViewController.swift in Sources */,
 			);
