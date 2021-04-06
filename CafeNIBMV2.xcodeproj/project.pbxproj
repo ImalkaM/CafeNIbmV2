@@ -22,6 +22,8 @@
 		AFA05DE82619A364009EC984 /* FoodSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DE62619A364009EC984 /* FoodSelectCell.swift */; };
 		AFA05DE92619A364009EC984 /* FoodSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA05DE72619A364009EC984 /* FoodSelectCell.xib */; };
 		AFA05DEC261A19F8009EC984 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DEB261A19F8009EC984 /* FoodDetailsViewController.swift */; };
+		AFA05DFF261C949C009EC984 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DFD261C949C009EC984 /* CartTableViewCell.swift */; };
+		AFA05E00261C949C009EC984 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA05DFE261C949C009EC984 /* CartTableViewCell.xib */; };
 		FAEE5F6E6A75380593E279B6 /* Pods_CafeNIBMV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A76BA084E1F22C26BC623EC /* Pods_CafeNIBMV2.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		AFA05DE62619A364009EC984 /* FoodSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelectCell.swift; sourceTree = "<group>"; };
 		AFA05DE72619A364009EC984 /* FoodSelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodSelectCell.xib; sourceTree = "<group>"; };
 		AFA05DEB261A19F8009EC984 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
+		AFA05DFD261C949C009EC984 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		AFA05DFE261C949C009EC984 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		F86A9B1C17341BCBF0565837 /* Pods-CafeNIBMV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNIBMV2.debug.xcconfig"; path = "Target Support Files/Pods-CafeNIBMV2/Pods-CafeNIBMV2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,8 @@
 				AFA05DA92618A08C009EC984 /* Main.storyboard */,
 				AFA05DE62619A364009EC984 /* FoodSelectCell.swift */,
 				AFA05DE72619A364009EC984 /* FoodSelectCell.xib */,
+				AFA05DFD261C949C009EC984 /* CartTableViewCell.swift */,
+				AFA05DFE261C949C009EC984 /* CartTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 				AFA05DB02618A08E009EC984 /* LaunchScreen.storyboard in Resources */,
 				AFA05DE92619A364009EC984 /* FoodSelectCell.xib in Resources */,
 				AFA05DCA2618BB11009EC984 /* GoogleService-Info.plist in Resources */,
+				AFA05E00261C949C009EC984 /* CartTableViewCell.xib in Resources */,
 				AFA05DAD2618A08E009EC984 /* Assets.xcassets in Resources */,
 				AFA05DAB2618A08C009EC984 /* Main.storyboard in Resources */,
 			);
@@ -263,6 +270,7 @@
 				AFA05DE82619A364009EC984 /* FoodSelectCell.swift in Sources */,
 				AFA05DDF26197E63009EC984 /* FoodDetails.swift in Sources */,
 				AFA05DA62618A08C009EC984 /* SceneDelegate.swift in Sources */,
+				AFA05DFF261C949C009EC984 /* CartTableViewCell.swift in Sources */,
 				AFA05DC12618B622009EC984 /* LoginViewController.swift in Sources */,
 				AFA05DC72618B682009EC984 /* Constants.swift in Sources */,
 				AFA05DEC261A19F8009EC984 /* FoodDetailsViewController.swift in Sources */,

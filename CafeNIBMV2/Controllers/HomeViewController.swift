@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
+    @IBOutlet weak var cartTableView: UITableView!
     
     let foodDetails: [FoodDetails] = [
         FoodDetails(name: "Rolls", description: "Special recipe, Try it now.Special recipe, Try it now.Special recipe, Try it now.Special recipe, Try it now.", price: 59.89, image: "download"),
@@ -22,7 +23,11 @@ class HomeViewController: UIViewController {
         mainTableView.dataSource = self
         mainTableView.delegate = self
         
+        cartTableView.dataSource = self
+        cartTableView.delegate = self
+        
         mainTableView.register(UINib(nibName: K.nibName, bundle: nil), forCellReuseIdentifier: K.mainTableCell)
+        cartTableView.register(UINib(nibName: K.nibNameCartTable, bundle: nil), forCellReuseIdentifier: K.cartTableCell)
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -50,18 +55,43 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        foodDetails.count
+        
+        if tableView == mainTableView{
+            return foodDetails.count
+        }
+        if tableView == cartTableView{
+            return 1
+        }
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.mainTableCell, for: indexPath) as! FoodSelectCell
         
-        cell.foodTitleLabel.text = foodDetails[indexPath.row].name
-        cell.foodDescriptionLabel.text = foodDetails[indexPath.row].description
-        cell.priceLabel.text = String(foodDetails[indexPath.row].price)
-        cell.foodImage.image = UIImage(named: "\(foodDetails[indexPath.row].image)")
+        if tableView == mainTableView{
+            let cell = tableView.dequeueReusableCell(withIdentifier: K.mainTableCell, for: indexPath) as! FoodSelectCell
+            
+            cell.foodTitleLabel.text = foodDetails[indexPath.row].name
+            cell.foodDescriptionLabel.text = foodDetails[indexPath.row].description
+            cell.priceLabel.text = String(foodDetails[indexPath.row].price)
+            cell.foodImage.image = UIImage(named: "\(foodDetails[indexPath.row].image)")
+            
+            return cell
+        }
         
-        return cell
+        if tableView == cartTableView{
+            let cell = tableView.dequeueReusableCell(withIdentifier: K.cartTableCell, for: indexPath) as! CartTableViewCell
+            
+//            cell.foodTitleLabel.text = foodDetails[indexPath.row].name
+//            cell.foodDescriptionLabel.text = foodDetails[indexPath.row].description
+//            cell.priceLabel.text = String(foodDetails[indexPath.row].price)
+//            cell.foodImage.image = UIImage(named: "\(foodDetails[indexPath.row].image)")
+            
+            return cell
+            
+        }
+        
+        return UITableViewCell()
     }
     
 }
@@ -69,8 +99,12 @@ extension HomeViewController: UITableViewDataSource{
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.performSegue(withIdentifier: K.FoodTableToFoodDetailsSeauge, sender: self)
+        if tableView == mainTableView{
+            self.performSegue(withIdentifier: K.FoodTableToFoodDetailsSeauge, sender: self)
+        }
+        if tableView == cartTableView{
+            
+        }
         
     }
     
@@ -83,6 +117,6 @@ extension HomeViewController: UITableViewDelegate {
             secondViewController.foodDescription = foodDetails[indexPath.row].description
             secondViewController.name = foodDetails[indexPath.row].name
             secondViewController.image = foodDetails[indexPath.row].image
-        } 
+        }
     }
 }

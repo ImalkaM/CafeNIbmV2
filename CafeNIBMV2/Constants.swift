@@ -13,8 +13,16 @@ struct K {
     static let loginToHomeSeauge = "LoginToHome"
     static let mainTableCell = "MainFoodCell"
     static let nibName = "FoodSelectCell"
+    static let nibNameCartTable = "CartTableViewCell"
+    static let cartTableCell = "CartTableCell"
     static let FoodTableToFoodDetailsSeauge = "FoodTableToFoodDetails"
    
+    struct FStoreCart {
+        static let collectionNameCartTable = "CartCell"
+        static let priceField = "price"
+        static let foodNameField = "foodname"
+        static let qtyField = "qty"
+    }
     
 }
 

@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Firebase
 
 class FoodDetailsViewController: UIViewController {
     
+    let db = Firestore.firestore()
     
     var price:Float = 0.0
     var image:String = ""
@@ -19,7 +21,7 @@ class FoodDetailsViewController: UIViewController {
     @IBOutlet weak var foodNamelabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    @IBOutlet weak var addToCartButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +30,31 @@ class FoodDetailsViewController: UIViewController {
         foodImage.image = UIImage(named: "\(image)")
         descriptionLabel.text = foodDescription
         foodNamelabel.text = name
-        // Do any additional setup after loading the view.
+        
+        addToCartButton.layer.cornerRadius = 25
+        addToCartButton.addConstraint(addToCartButton.heightAnchor.constraint(equalToConstant: 50))
+       
     }
     
-
+    @IBAction func addToCartTapped(_ sender: UIButton) {
+        
+       
+            db.collection(K.FStoreCart.collectionNameCartTable).addDocument(data:
+                                                                                [
+                                                                                 K.FStoreCart.foodNameField: name,
+                                                                                 K.FStoreCart.qtyField: 1,
+                                                                                 K.FStoreCart.priceField: price
+                                                                                ]
+            ) { (error) in
+                if let e = error{
+                    print("There was an issue saving data to firestore, \(e)")
+                }else{
+                    print("Sucessfully saved data")
+                }
+            }
+        }
+        
+    
     /*
     // MARK: - Navigation
 

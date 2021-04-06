@@ -178,7 +178,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="diL-A2-KS1">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                <rect key="frame" x="0.0" y="60" width="414" height="90"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </tableView>
                                         </subviews>
@@ -188,24 +188,24 @@
                                             <constraint firstAttribute="height" constant="150" id="EAe-1j-5WB"/>
                                             <constraint firstAttribute="trailing" secondItem="diL-A2-KS1" secondAttribute="trailing" id="EGM-V1-6K9"/>
                                             <constraint firstAttribute="bottom" secondItem="diL-A2-KS1" secondAttribute="bottom" id="d4I-nl-G35"/>
-                                            <constraint firstItem="diL-A2-KS1" firstAttribute="top" secondItem="BFO-iG-g2w" secondAttribute="top" id="hOp-tG-oSo"/>
+                                            <constraint firstItem="diL-A2-KS1" firstAttribute="top" secondItem="BFO-iG-g2w" secondAttribute="top" constant="60" id="hOp-tG-oSo"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCB-af-vYB">
-                                        <rect key="frame" x="0.0" y="150" width="414" height="64"/>
+                                        <rect key="frame" x="0.0" y="150" width="414" height="30"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="HDe-Zj-owY"/>
+                                            <constraint firstAttribute="height" constant="30" id="HDe-Zj-owY"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8yX-DL-O8O">
-                                        <rect key="frame" x="0.0" y="214" width="414" height="682"/>
+                                        <rect key="frame" x="0.0" y="180" width="414" height="716"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5m-gE-aQo">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="574"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qqd-fV-LtP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="574"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </tableView>
                                                 </subviews>
@@ -218,7 +218,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzy-M3-Fsu">
-                                                <rect key="frame" x="0.0" y="582" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="616" width="414" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="APv-bM-IeQ"/>
@@ -244,6 +244,7 @@
                     <navigationItem key="navigationItem" id="GM3-QY-vd6"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="cartTableView" destination="diL-A2-KS1" id="tEb-di-LXs"/>
                         <outlet property="mainTableView" destination="qqd-fV-LtP" id="JlM-Qq-Kkk"/>
                         <segue destination="bv0-16-Vah" kind="show" identifier="FoodTableToFoodDetails" id="Loj-dB-3Sr"/>
                     </connections>
@@ -306,13 +307,29 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d62-cD-WLo">
+                                                <rect key="frame" x="132" y="260" width="150" height="30"/>
+                                                <color key="backgroundColor" red="0.14301070530000001" green="0.65490196079999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="mSt-I9-A6e"/>
+                                                </constraints>
+                                                <state key="normal" title="Add 1 to cart">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addToCartTapped:" destination="bv0-16-Vah" eventType="touchUpInside" id="NUq-je-5Bn"/>
+                                                    <action selector="loginButtonTapped:" destination="DeZ-oU-pz0" eventType="touchUpInside" id="TaI-u8-jTL"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <constraints>
                                             <constraint firstItem="Lxd-Cm-3CK" firstAttribute="top" secondItem="rXS-CD-k86" secondAttribute="bottom" constant="20.5" id="Ie1-or-k2F"/>
                                             <constraint firstItem="rXS-CD-k86" firstAttribute="leading" secondItem="YNK-KQ-voQ" secondAttribute="leading" constant="8" id="acT-7I-wCm"/>
                                             <constraint firstItem="Lxd-Cm-3CK" firstAttribute="leading" secondItem="YNK-KQ-voQ" secondAttribute="leading" constant="8" id="i5h-1A-q33"/>
+                                            <constraint firstItem="d62-cD-WLo" firstAttribute="centerY" secondItem="YNK-KQ-voQ" secondAttribute="centerY" id="jpr-0e-Eeo"/>
                                             <constraint firstItem="rXS-CD-k86" firstAttribute="top" secondItem="YNK-KQ-voQ" secondAttribute="top" constant="8" id="tor-3C-z6J"/>
+                                            <constraint firstItem="d62-cD-WLo" firstAttribute="centerX" secondItem="YNK-KQ-voQ" secondAttribute="centerX" id="xv0-uL-Xq5"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -329,6 +346,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ypb-3c-X2k"/>
                     <connections>
+                        <outlet property="addToCartButton" destination="d62-cD-WLo" id="kbW-fD-pdP"/>
                         <outlet property="descriptionLabel" destination="Lxd-Cm-3CK" id="AFu-vO-PnB"/>
                         <outlet property="foodImage" destination="G0p-HQ-ap8" id="4Kf-NT-fw0"/>
                         <outlet property="foodNamelabel" destination="5Gf-lN-wOB" id="gCi-ie-GD7"/>
@@ -359,7 +377,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vaC-gY-BEZ"/>
+        <segue reference="Fbq-bm-bBg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="kicthenLogo" width="48" height="48"/>
