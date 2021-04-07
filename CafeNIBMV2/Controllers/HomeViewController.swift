@@ -18,6 +18,9 @@ class HomeViewController: UIViewController {
         FoodDetails(name: "Rolls", description: "Special recipe, Try it now.", price: 59.89, image: "")
     ]
     
+    var cartDetails:[FoodCart] = [FoodCart]()
+    var cartQTY = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mainTableView.dataSource = self
@@ -29,10 +32,14 @@ class HomeViewController: UIViewController {
         mainTableView.register(UINib(nibName: K.nibName, bundle: nil), forCellReuseIdentifier: K.mainTableCell)
         cartTableView.register(UINib(nibName: K.nibNameCartTable, bundle: nil), forCellReuseIdentifier: K.cartTableCell)
         // Do any additional setup after loading the view.
+        
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        cartTableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -40,16 +47,8 @@ class HomeViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
     }
-    */
-    
 }
 
 extension HomeViewController: UITableViewDataSource{
@@ -60,7 +59,7 @@ extension HomeViewController: UITableViewDataSource{
             return foodDetails.count
         }
         if tableView == cartTableView{
-            return 1
+           return cartDetails.count
         }
         
         return 0
@@ -82,11 +81,10 @@ extension HomeViewController: UITableViewDataSource{
         if tableView == cartTableView{
             let cell = tableView.dequeueReusableCell(withIdentifier: K.cartTableCell, for: indexPath) as! CartTableViewCell
             
-//            cell.foodTitleLabel.text = foodDetails[indexPath.row].name
-//            cell.foodDescriptionLabel.text = foodDetails[indexPath.row].description
-//            cell.priceLabel.text = String(foodDetails[indexPath.row].price)
-//            cell.foodImage.image = UIImage(named: "\(foodDetails[indexPath.row].image)")
-            
+            cell.foodName.text = cartDetails[indexPath.row].name
+            cell.foodPrice.text = String(cartDetails[indexPath.row].totalPrice)
+            cell.foodQTY.text = String(cartDetails[indexPath.row].qty)
+            cell.delegate = self
             return cell
             
         }
@@ -94,6 +92,47 @@ extension HomeViewController: UITableViewDataSource{
         return UITableViewCell()
     }
     
+}
+
+extension HomeViewController: CartCellViewDelegate{
+    
+    func didTappedButton(with title: String, in cell: CartTableViewCell) {
+        
+        
+        
+        if title == "Plus"{
+            if let indexPath = cartTableView.indexPath(for: cell){
+                
+                let intitalPrice = cartDetails[indexPath.row].price
+                cartDetails[indexPath.row].qty += 1
+                cartDetails[indexPath.row].totalPrice = intitalPrice * Float(cartDetails[indexPath.row].qty)
+                
+                
+                
+                DispatchQueue.main.async {
+                    self.cartTableView.reloadData()
+                }
+            }
+            
+        }
+        if title == "Minus"{
+            if let indexPath = cartTableView.indexPath(for: cell){
+                
+                let intitalPrice = cartDetails[indexPath.row].price
+                cartDetails[indexPath.row].qty -= 1
+                cartDetails[indexPath.row].totalPrice = intitalPrice * Float(cartDetails[indexPath.row].qty)
+                
+                if cartDetails[indexPath.row].qty == 0{
+                    cartDetails.remove(at: indexPath.row)
+                    cartTableView.deleteRows(at: [indexPath], with: .fade)
+                }
+                
+                DispatchQueue.main.async {
+                    self.cartTableView.reloadData()
+                }
+            }
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDelegate {

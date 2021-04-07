@@ -351,9 +351,11 @@
                         <outlet property="foodImage" destination="G0p-HQ-ap8" id="4Kf-NT-fw0"/>
                         <outlet property="foodNamelabel" destination="5Gf-lN-wOB" id="gCi-ie-GD7"/>
                         <outlet property="priceLabel" destination="rXS-CD-k86" id="ibZ-OY-uKf"/>
+                        <segue destination="Pf0-BQ-kdk" kind="unwind" identifier="FoodDetailsToHome" unwindAction="unwind:" id="vOM-bY-mfh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDJ-L1-4jH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Pf0-BQ-kdk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2882.608695652174" y="-380.35714285714283"/>
         </scene>

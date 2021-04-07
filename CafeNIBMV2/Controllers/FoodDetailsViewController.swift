@@ -38,31 +38,30 @@ class FoodDetailsViewController: UIViewController {
     
     @IBAction func addToCartTapped(_ sender: UIButton) {
         
-       
-            db.collection(K.FStoreCart.collectionNameCartTable).addDocument(data:
-                                                                                [
-                                                                                 K.FStoreCart.foodNameField: name,
-                                                                                 K.FStoreCart.qtyField: 1,
-                                                                                 K.FStoreCart.priceField: price
-                                                                                ]
-            ) { (error) in
-                if let e = error{
-                    print("There was an issue saving data to firestore, \(e)")
-                }else{
-                    print("Sucessfully saved data")
-                }
-            }
-        }
+        performSegue(withIdentifier: K.FooddetailsToHomeUnwindSeauge, sender:self)
         
+//            db.collection(K.FStoreCart.collectionNameCartTable).addDocument(data:
+//                                                                                [
+//                                                                                 K.FStoreCart.foodNameField: name,
+//                                                                                 K.FStoreCart.qtyField: 1,
+//                                                                                 K.FStoreCart.priceField: price
+//                                                                                ]
+//            ) { (error) in
+//                if let e = error{
+//                    print("There was an issue saving data to firestore, \(e)")
+//                }else{
+//                    print("Sucessfully saved data")
+//                }
+//            }
+        
+        
+        }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let homeVC = segue.destination as! HomeViewController
+        
+        homeVC.cartDetails.append(FoodCart(price: price, qty: 1, name: name, totalQty: 1, totalPrice: price))
     }
-    */
+
 
 }

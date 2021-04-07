@@ -24,6 +24,7 @@
 		AFA05DEC261A19F8009EC984 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DEB261A19F8009EC984 /* FoodDetailsViewController.swift */; };
 		AFA05DFF261C949C009EC984 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DFD261C949C009EC984 /* CartTableViewCell.swift */; };
 		AFA05E00261C949C009EC984 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA05DFE261C949C009EC984 /* CartTableViewCell.xib */; };
+		AFA05E03261CA442009EC984 /* FoodCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05E02261CA442009EC984 /* FoodCart.swift */; };
 		FAEE5F6E6A75380593E279B6 /* Pods_CafeNIBMV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A76BA084E1F22C26BC623EC /* Pods_CafeNIBMV2.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		AFA05DEB261A19F8009EC984 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
 		AFA05DFD261C949C009EC984 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		AFA05DFE261C949C009EC984 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		AFA05E02261CA442009EC984 /* FoodCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCart.swift; sourceTree = "<group>"; };
 		F86A9B1C17341BCBF0565837 /* Pods-CafeNIBMV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNIBMV2.debug.xcconfig"; path = "Target Support Files/Pods-CafeNIBMV2/Pods-CafeNIBMV2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA05DDE26197E63009EC984 /* FoodDetails.swift */,
+				AFA05E02261CA442009EC984 /* FoodCart.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				AFA05DA82618A08C009EC984 /* ViewController.swift in Sources */,
 				AFA05DA42618A08C009EC984 /* AppDelegate.swift in Sources */,
 				AFA05DE82619A364009EC984 /* FoodSelectCell.swift in Sources */,
+				AFA05E03261CA442009EC984 /* FoodCart.swift in Sources */,
 				AFA05DDF26197E63009EC984 /* FoodDetails.swift in Sources */,
 				AFA05DA62618A08C009EC984 /* SceneDelegate.swift in Sources */,
 				AFA05DFF261C949C009EC984 /* CartTableViewCell.swift in Sources */,

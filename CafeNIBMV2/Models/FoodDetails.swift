@@ -13,4 +13,7 @@ struct FoodDetails {
     let description: String
     let price:Float
     let image:String
+ 
 }
+
+

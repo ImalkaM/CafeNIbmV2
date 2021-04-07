@@ -34,6 +34,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePz-dB-cak">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="minusBtbTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iFG-G0-uQb"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wS-9p-GOJ">
                                                 <rect key="frame" x="38" y="0.0" width="7.5" height="30"/>
@@ -44,6 +47,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STs-gh-Z8q">
                                                 <rect key="frame" x="53.5" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="plusBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Qee-7u-8qp"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -75,6 +81,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="foodName" destination="PAn-05-p31" id="oKF-2P-fr8"/>
+                <outlet property="foodPrice" destination="uNB-Wk-5XM" id="mV8-C4-c38"/>
+                <outlet property="foodQTY" destination="2wS-9p-GOJ" id="3Rt-H1-4vK"/>
+            </connections>
             <point key="canvasLocation" x="110.14492753623189" y="100.44642857142857"/>
         </tableViewCell>
     </objects>

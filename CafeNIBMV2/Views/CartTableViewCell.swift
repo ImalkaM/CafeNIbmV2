@@ -7,8 +7,21 @@
 
 import UIKit
 
+protocol CartCellViewDelegate:AnyObject {
+    
+    func didTappedButton(with title: String, in cell: CartTableViewCell)
+}
+
+
+
 class CartTableViewCell: UITableViewCell {
 
+    weak var delegate:CartCellViewDelegate?
+   
+    @IBOutlet weak var foodName: UILabel!
+    @IBOutlet weak var foodQTY: UILabel!
+    @IBOutlet weak var foodPrice: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +33,14 @@ class CartTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func minusBtbTapped(_ sender: Any) {
+        
+        delegate?.didTappedButton(with: "Minus", in: self)
+    }
+    @IBAction func plusBtnTapped(_ sender: Any) {
+      
+        
+        delegate?.didTappedButton(with: "Plus", in: self)
+
+    }
 }

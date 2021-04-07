@@ -16,6 +16,7 @@ struct K {
     static let nibNameCartTable = "CartTableViewCell"
     static let cartTableCell = "CartTableCell"
     static let FoodTableToFoodDetailsSeauge = "FoodTableToFoodDetails"
+    static let FooddetailsToHomeUnwindSeauge = "FoodDetailsToHome"
    
     struct FStoreCart {
         static let collectionNameCartTable = "CartCell"
