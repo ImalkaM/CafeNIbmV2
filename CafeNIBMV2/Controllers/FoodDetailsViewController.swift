@@ -60,8 +60,9 @@ class FoodDetailsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let homeVC = segue.destination as! HomeViewController
         
-        homeVC.cartDetails.append(FoodCart(price: price, qty: 1, name: name, totalQty: 1, totalPrice: price))
+        homeVC.cartDetails.append(FoodCart(initialPrice: price, qty: 1, name: name, totalPriceSingleItem: Double(price)))
+//        homeVC.orderDetails.append(OderDetails(Id: 1, dateTime: Date(), foodDetais: FoodDetails(name: name, description: description, price: price, image: ""), totalPrice: 0))
+        homeVC.totalPriceOrder += Double(price)
+        //print(homeVC.orderDetails)
     }
-
-
 }

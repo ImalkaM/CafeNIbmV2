@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B02A8B0F-D43D-44B9-8B59-63B3CE9FC1DD"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FB28275-7343-4FEE-A0DF-ED1026CC4D0F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CafeNIBMV2/Controllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A18DE43-C07D-40D6-92DE-98287C923797"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CafeNIBMV2/Controllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF978F02-2B00-4E92-B49B-98E11305C055"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CafeNIBMV2/Controllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0E84D27-4A81-4412-B720-803351D90E6B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CafeNIBMV2/Controllers/FoodDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87FC7593-448C-4114-AD19-BEAFB9B69310"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CafeNIBMV2/Controllers/FoodDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "FoodDetailsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "87FC7593-448C-4114-AD19-BEAFB9B69310 - 94370c7a75e35cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CafeNIBMV2.FoodDetailsViewController.price.getter : Swift.Float"
+                  moduleName = "CafeNIBMV2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ImalkaM/Desktop/CafeNIBMV2/CafeNIBMV2/Controllers/FoodDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  uuid = "87FC7593-448C-4114-AD19-BEAFB9B69310 - 490208ba535151bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CafeNIBMV2.FoodDetailsViewController.price.setter : Swift.Float"
+                  moduleName = "CafeNIBMV2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ImalkaM/Desktop/CafeNIBMV2/CafeNIBMV2/Controllers/FoodDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "125">
+               </Location>
+               <Location
+                  uuid = "87FC7593-448C-4114-AD19-BEAFB9B69310 - be24f0af672442ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CafeNIBMV2.FoodDetailsViewController.price.modify : Swift.Float"
+                  moduleName = "CafeNIBMV2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ImalkaM/Desktop/CafeNIBMV2/CafeNIBMV2/Controllers/FoodDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "87FC7593-448C-4114-AD19-BEAFB9B69310 - 6182fb609c511e84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CafeNIBMV2.FoodDetailsViewController.price.modify : Swift.Float with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CafeNIBMV2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ImalkaM/Desktop/CafeNIBMV2/CafeNIBMV2/Controllers/FoodDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "87FC7593-448C-4114-AD19-BEAFB9B69310 - fda9a20afa9cdf73"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CafeNIBMV2.FoodDetailsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; CafeNIBMV2.FoodDetailsViewController"
+                  moduleName = "CafeNIBMV2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ImalkaM/Desktop/CafeNIBMV2/CafeNIBMV2/Controllers/FoodDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "466">
+               </Location>
+               <Location
+                  uuid = "87FC7593-448C-4114-AD19-BEAFB9B69310 - 5d1dc76c0620e1aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CafeNIBMV2.FoodDetailsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CafeNIBMV2.FoodDetailsViewController&gt;"
+                  moduleName = "CafeNIBMV2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ImalkaM/Desktop/CafeNIBMV2/CafeNIBMV2/Controllers/FoodDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "407">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

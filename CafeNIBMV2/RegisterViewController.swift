@@ -45,13 +45,7 @@ class RegisterViewController: UIViewController {
               // ...
             }
         }
-        
-       
-        
     }
-    
-    
-    
     func registerTextFieldSizeSetup(){
         emailAddressTextField.addConstraint(emailAddressTextField.heightAnchor.constraint(equalToConstant: 50))
         emailAddressTextField.addConstraint(emailAddressTextField.widthAnchor.constraint(equalToConstant: 270))

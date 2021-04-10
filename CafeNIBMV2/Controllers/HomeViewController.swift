@@ -6,11 +6,21 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var orderButtonView: UIView!
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var cartTableView: UITableView!
+    
+    @IBOutlet weak var orderbutton: UIButton!
+    
+    @IBOutlet weak var labelOrder: UILabel!
+    
+    var totalPriceOrder = 0.0
+    
+    let db = Firestore.firestore()
     
     let foodDetails: [FoodDetails] = [
         FoodDetails(name: "Rolls", description: "Special recipe, Try it now.Special recipe, Try it now.Special recipe, Try it now.Special recipe, Try it now.", price: 59.89, image: "download"),
@@ -19,6 +29,7 @@ class HomeViewController: UIViewController {
     ]
     
     var cartDetails:[FoodCart] = [FoodCart]()
+    //var orderDetails:[OderDetails] = [OderDetails]()
     var cartQTY = 1
     
     override func viewDidLoad() {
@@ -32,14 +43,28 @@ class HomeViewController: UIViewController {
         mainTableView.register(UINib(nibName: K.nibName, bundle: nil), forCellReuseIdentifier: K.mainTableCell)
         cartTableView.register(UINib(nibName: K.nibNameCartTable, bundle: nil), forCellReuseIdentifier: K.cartTableCell)
         // Do any additional setup after loading the view.
+        orderButtonView.layer.cornerRadius = 25
         
+        
+        labelOrder.text = String(totalPriceOrder)
        
     }
+    
+//    func calculateTotalPrice() -> Double {
+//
+//        var tempPrice = 0.0
+//        for items in cartDetails{
+//            tempPrice = Totalprice + Double(items.initialPrice)
+//        }
+//        return tempPrice
+//    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         
         cartTableView.reloadData()
+        labelOrder.text = String(format:"%.2f", totalPriceOrder)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,9 +74,54 @@ class HomeViewController: UIViewController {
 
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
     }
+   
+    
+    @IBAction func orderBtnPressed(_ sender: Any) {
+        
+        var foodInfo:[OderDetails.orderFoodDetails] = [OderDetails.orderFoodDetails]()
+        
+        for items in cartDetails{
+            foodInfo.append(OderDetails.orderFoodDetails(name: items.name, qty: items.qty, intialPrice: Double(items.initialPrice)))
+        }
+        var foods:[NSDictionary] = []
+        
+        for item in cartDetails {
+            let dic = [
+                "name":item.name,
+                "quentity":item.qty,
+                "price":item.totalPriceSingleItem
+            ] as [String : Any]
+            
+            foods.append(dic as NSDictionary)
+        }
+        
+        db.collection("orders").addDocument(data: [
+            "time": Date(),
+            "Items":  foods ,
+            "price": totalPriceOrder,
+            "status":1
+        ]) { err in
+            if let err = err {
+                let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
+            } else {
+                self.cartDetails.removeAll()
+                
+                self.cartTableView.reloadData()
+    //            self.foodDetails.removeAll()
+//                self.appDelegate.cartCount = 0
+                self.totalPriceOrder = 0
+                let alert = UIAlertController(title: "Success", message: "Order Placed Successfully", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alert, animated: true)
+            }
+        }
+        
+    }
+    
 }
-
-extension HomeViewController: UITableViewDataSource{
+extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -82,7 +152,7 @@ extension HomeViewController: UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: K.cartTableCell, for: indexPath) as! CartTableViewCell
             
             cell.foodName.text = cartDetails[indexPath.row].name
-            cell.foodPrice.text = String(cartDetails[indexPath.row].totalPrice)
+            cell.foodPrice.text = String(format:"%.2f", cartDetails[indexPath.row].totalPriceSingleItem)
             cell.foodQTY.text = String(cartDetails[indexPath.row].qty)
             cell.delegate = self
             return cell
@@ -94,7 +164,7 @@ extension HomeViewController: UITableViewDataSource{
     
 }
 
-extension HomeViewController: CartCellViewDelegate{
+extension HomeViewController: CartCellViewDelegate {
     
     func didTappedButton(with title: String, in cell: CartTableViewCell) {
         
@@ -103,35 +173,46 @@ extension HomeViewController: CartCellViewDelegate{
         if title == "Plus"{
             if let indexPath = cartTableView.indexPath(for: cell){
                 
-                let intitalPrice = cartDetails[indexPath.row].price
+                let intitalPrice = cartDetails[indexPath.row].initialPrice
                 cartDetails[indexPath.row].qty += 1
-                cartDetails[indexPath.row].totalPrice = intitalPrice * Float(cartDetails[indexPath.row].qty)
+                cartDetails[indexPath.row].totalPriceSingleItem = Double(intitalPrice * Float(cartDetails[indexPath.row].qty))
                 
-                
-                
+                totalPriceOrder = OderDetails.calculateOrderTotalPrice(totalPrice: totalPriceOrder, cartItems: cartDetails[indexPath.row])
+                labelOrder.text = String(format:"%.2f",totalPriceOrder)
                 DispatchQueue.main.async {
                     self.cartTableView.reloadData()
                 }
+                //labelOrder.text =  "Order (Rs.\(String(cartDetails[indexPath.row].totalPrice)))"
+                //orderbutton.setTitle("Order (Rs.\())", for: .normal)
             }
-            
         }
         if title == "Minus"{
             if let indexPath = cartTableView.indexPath(for: cell){
                 
-                let intitalPrice = cartDetails[indexPath.row].price
+                let intitalPrice = cartDetails[indexPath.row].initialPrice
                 cartDetails[indexPath.row].qty -= 1
-                cartDetails[indexPath.row].totalPrice = intitalPrice * Float(cartDetails[indexPath.row].qty)
+                cartDetails[indexPath.row].totalPriceSingleItem = Double(intitalPrice * Float(cartDetails[indexPath.row].qty))
+                totalPriceOrder = totalPriceOrder - Double(cartDetails[indexPath.row].initialPrice)
+                labelOrder.text = String(format:"%.2f",totalPriceOrder)
                 
                 if cartDetails[indexPath.row].qty == 0{
                     cartDetails.remove(at: indexPath.row)
                     cartTableView.deleteRows(at: [indexPath], with: .fade)
+                    //orderDetails.remove(at: indexPath.row)
+                    
                 }
                 
                 DispatchQueue.main.async {
                     self.cartTableView.reloadData()
                 }
+               // labelOrder.text =  "Order (Rs.\(String(cartDetails[indexPath.row].totalPrice)))"
             }
+            
         }
+        
+//        for items in cartDetails {
+//            orderDetails[IndexPath.row]
+//        }
     }
 }
 
@@ -144,7 +225,6 @@ extension HomeViewController: UITableViewDelegate {
         if tableView == cartTableView{
             
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

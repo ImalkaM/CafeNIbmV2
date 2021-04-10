@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF923AF22621BBD3001AD12C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF923AF12621BBD3001AD12C /* Extensions.swift */; };
+		AF923AF72621FD0B001AD12C /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF923AF52621FD0B001AD12C /* OrderTableViewCell.swift */; };
+		AF923AF82621FD0B001AD12C /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF923AF62621FD0B001AD12C /* OrderTableViewCell.xib */; };
+		AF923AFB2621FE7A001AD12C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF923AFA2621FE7A001AD12C /* OrderViewController.swift */; };
 		AFA05DA42618A08C009EC984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DA32618A08C009EC984 /* AppDelegate.swift */; };
 		AFA05DA62618A08C009EC984 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DA52618A08C009EC984 /* SceneDelegate.swift */; };
 		AFA05DA82618A08C009EC984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DA72618A08C009EC984 /* ViewController.swift */; };
@@ -25,12 +29,17 @@
 		AFA05DFF261C949C009EC984 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05DFD261C949C009EC984 /* CartTableViewCell.swift */; };
 		AFA05E00261C949C009EC984 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA05DFE261C949C009EC984 /* CartTableViewCell.xib */; };
 		AFA05E03261CA442009EC984 /* FoodCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05E02261CA442009EC984 /* FoodCart.swift */; };
+		AFA05E21261DF61C009EC984 /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA05E20261DF61C009EC984 /* OrderDetails.swift */; };
 		FAEE5F6E6A75380593E279B6 /* Pods_CafeNIBMV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A76BA084E1F22C26BC623EC /* Pods_CafeNIBMV2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A76BA084E1F22C26BC623EC /* Pods_CafeNIBMV2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeNIBMV2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8069CA927F7B9F800F9D8CF4 /* Pods-CafeNIBMV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNIBMV2.release.xcconfig"; path = "Target Support Files/Pods-CafeNIBMV2/Pods-CafeNIBMV2.release.xcconfig"; sourceTree = "<group>"; };
+		AF923AF12621BBD3001AD12C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AF923AF52621FD0B001AD12C /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		AF923AF62621FD0B001AD12C /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		AF923AFA2621FE7A001AD12C /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		AFA05DA02618A08C009EC984 /* CafeNIBMV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeNIBMV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA05DA32618A08C009EC984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA05DA52618A08C009EC984 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +60,7 @@
 		AFA05DFD261C949C009EC984 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		AFA05DFE261C949C009EC984 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		AFA05E02261CA442009EC984 /* FoodCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCart.swift; sourceTree = "<group>"; };
+		AFA05E20261DF61C009EC984 /* OrderDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetails.swift; sourceTree = "<group>"; };
 		F86A9B1C17341BCBF0565837 /* Pods-CafeNIBMV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNIBMV2.debug.xcconfig"; path = "Target Support Files/Pods-CafeNIBMV2/Pods-CafeNIBMV2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +93,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF923AF02621BBB5001AD12C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AF923AF12621BBD3001AD12C /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		AFA05D972618A08C009EC984 = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +122,12 @@
 		AFA05DA22618A08C009EC984 /* CafeNIBMV2 */ = {
 			isa = PBXGroup;
 			children = (
+				AF923AF02621BBB5001AD12C /* Utilities */,
 				AFA05DBB2618A99D009EC984 /* Models */,
 				AFA05DBA2618A990009EC984 /* Controllers */,
 				AFA05DB82618A982009EC984 /* Views */,
 				AFA05DA32618A08C009EC984 /* AppDelegate.swift */,
+				AFA05DBD2618AD99009EC984 /* RegisterViewController.swift */,
 				AFA05DA52618A08C009EC984 /* SceneDelegate.swift */,
 				AFA05DA72618A08C009EC984 /* ViewController.swift */,
 				AFA05DAC2618A08E009EC984 /* Assets.xcassets */,
@@ -127,6 +147,8 @@
 				AFA05DE72619A364009EC984 /* FoodSelectCell.xib */,
 				AFA05DFD261C949C009EC984 /* CartTableViewCell.swift */,
 				AFA05DFE261C949C009EC984 /* CartTableViewCell.xib */,
+				AF923AF52621FD0B001AD12C /* OrderTableViewCell.swift */,
+				AF923AF62621FD0B001AD12C /* OrderTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,10 +156,10 @@
 		AFA05DBA2618A990009EC984 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AFA05DBD2618AD99009EC984 /* RegisterViewController.swift */,
 				AFA05DC02618B622009EC984 /* LoginViewController.swift */,
 				AFA05DC32618B630009EC984 /* HomeViewController.swift */,
 				AFA05DEB261A19F8009EC984 /* FoodDetailsViewController.swift */,
+				AF923AFA2621FE7A001AD12C /* OrderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +169,7 @@
 			children = (
 				AFA05DDE26197E63009EC984 /* FoodDetails.swift */,
 				AFA05E02261CA442009EC984 /* FoodCart.swift */,
+				AFA05E20261DF61C009EC984 /* OrderDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +238,7 @@
 				AFA05DCA2618BB11009EC984 /* GoogleService-Info.plist in Resources */,
 				AFA05E00261C949C009EC984 /* CartTableViewCell.xib in Resources */,
 				AFA05DAD2618A08E009EC984 /* Assets.xcassets in Resources */,
+				AF923AF82621FD0B001AD12C /* OrderTableViewCell.xib in Resources */,
 				AFA05DAB2618A08C009EC984 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,12 +298,16 @@
 				AFA05E03261CA442009EC984 /* FoodCart.swift in Sources */,
 				AFA05DDF26197E63009EC984 /* FoodDetails.swift in Sources */,
 				AFA05DA62618A08C009EC984 /* SceneDelegate.swift in Sources */,
+				AF923AF72621FD0B001AD12C /* OrderTableViewCell.swift in Sources */,
 				AFA05DFF261C949C009EC984 /* CartTableViewCell.swift in Sources */,
 				AFA05DC12618B622009EC984 /* LoginViewController.swift in Sources */,
+				AFA05E21261DF61C009EC984 /* OrderDetails.swift in Sources */,
 				AFA05DC72618B682009EC984 /* Constants.swift in Sources */,
 				AFA05DEC261A19F8009EC984 /* FoodDetailsViewController.swift in Sources */,
 				AFA05DBE2618AD99009EC984 /* RegisterViewController.swift in Sources */,
 				AFA05DC42618B630009EC984 /* HomeViewController.swift in Sources */,
+				AF923AF22621BBD3001AD12C /* Extensions.swift in Sources */,
+				AF923AFB2621FE7A001AD12C /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
